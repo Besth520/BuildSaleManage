@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.custom.i18n.resources" value="message"></constant>
+    <package name="default" namespace="/" extends="struts-default">
+    	<global-results>
+    		<result name="login_fail">/login.jsp</result>
+    		<result name="unauthorized">/unauthorized.jsp</result>
+    	</global-results>
+    	
+    	<!-- <global-exception-mappings>
+    		<exception-mapping result="unauthorized" exception="org.apache.shiro.authz.AuthorizationException"></exception-mapping>
+    	</global-exception-mappings> -->
+    	
+    	<action name="page_*_*">
+    		<result>/WEB-INF/pages/{1}/{2}.jsp</result>
+    	</action>
+    	
+    	<action name="userAction_*" class="userAction" method="{1}">
+    		<result name="login_success">/WEB-INF/pages/common/index.jsp</result>
+    		<result name="login">/login.jsp</result>
+    		<result name="list">/WEB-INF/pages/admin/userlist.jsp</result>
+    	</action>
+    	
+    	<action name="functionAction_*" class="functionAction" method="{1}">
+    		
+    	</action>
+    	
+    	<action name="roleAction_*" class="roleAction" method="{1}">
+    		<result name="list">/WEB-INF/pages/admin/role.jsp</result>
+    	</action>
+    	
+    	<action name="customerAction_*" class="customerAction" method="{1}">
+    		<result name="listAll">/WEB-INF/pages/customer/list.jsp</result>
+    	</action>
+    	
+    	<action name="houseAction_*" class="houseAction" method="{1}">
+    		<result name="listAll">/WEB-INF/pages/base/house.jsp</result>
+    	</action>
+    	
+    	<action name="buildAction_*" class="buildAction" method="{1}">
+    		<result name="listAll">/WEB-INF/pages/base/build.jsp</result>
+    	</action>
+    	
+    	<action name="roomAction_*" class="roomAction" method="{1}">
+    		<result name="listAll">/WEB-INF/pages/base/room.jsp</result>
+    	</action>
+    	
+    	<action name="recordAction_*" class="recordAction" method="{1}">
+    		<result name="listAll">/WEB-INF/pages/room/record.jsp</result>
+    		<result name="list">/WEB-INF/pages/room/room_add.jsp</result>
+    	</action>
+    	
+    </package>
+</struts>
+

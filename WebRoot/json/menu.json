@@ -1,0 +1,12 @@
+[
+		{ "id":"11", "pId":"0", "name":"楼盘资料管理"},
+		{ "id":"112", "pId":"11", "name":"楼盘资料管理",  "page":"page_base_house.action"},
+		{ "id":"113", "pId":"11", "name":"楼房资料管理","page":"page_base_build.action"},
+		{ "id":"114", "pId":"11", "name":"房屋资料管理", "page":"page_base_room.action"},
+		{ "id":"12", "pId":"0", "name":"房屋销售管理"},
+		{ "id":"121", "pId":"12", "name":"房屋销售录入" ,"page":"page_room_room_add.action"},
+		{ "id":"122", "pId":"12", "name":"销售记录查询" ,"page":"page_room_record.action"},
+		{ "id":"124", "pId":"12", "name":"销售信息审核" ,"page":"page_room_check.action"},
+		{ "id":"13", "pId":"0", "name":"客户资料管理"},
+		{ "id":"131", "pId":"13", "name":"客户资料","page":"page_customer_list.action"}
+]
